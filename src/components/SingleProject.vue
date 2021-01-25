@@ -4,7 +4,9 @@
       <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
       <div class="icons">
         <span class="material-icons" @click="deleteProject"> delete </span>
-        <span class="material-icons"> edit </span>
+        <span class="material-icons" @click="pushToEdit(project.id)">
+          edit
+        </span>
         <span
           class="material-icons"
           @click="completeProject"
@@ -35,6 +37,9 @@ export default {
     },
   },
   methods: {
+    pushToEdit(projectId) {
+      this.$router.push(`/projects/edit/${projectId}`);
+    },
     deleteProject() {
       fetch(`${this.uri}/${this.project.id}`, {
         method: "DELETE",

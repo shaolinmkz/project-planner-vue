@@ -1,9 +1,9 @@
 <template>
   <nav class="main-nav">
-      <router-link to="/">
+      <router-link to="/projects">
         Projects
       </router-link>
-      <router-link to="/add">
+      <router-link to="/projects/add">
         Add a New Project
       </router-link>
   </nav>
