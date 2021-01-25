@@ -1,11 +1,17 @@
 <template>
-  <div class="project" :class="{ 'completed': project.complete }">
+  <div class="project" :class="{ completed: project.complete }">
     <div class="actions">
       <h3 @click="showDetails = !showDetails">{{ project.title }}</h3>
       <div class="icons">
         <span class="material-icons" @click="deleteProject"> delete </span>
         <span class="material-icons"> edit </span>
-        <span class="material-icons" @click="completeProject" :class="{ 'completed': project.complete }"> done </span>
+        <span
+          class="material-icons"
+          @click="completeProject"
+          :class="{ completed: project.complete }"
+        >
+          done
+        </span>
       </div>
     </div>
     <div class="details" v-if="showDetails">
@@ -42,16 +48,16 @@ export default {
       fetch(`${this.uri}/${this.project.id}`, {
         method: "PATCH",
         headers: {
-            "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            complete: !this.project.complete
-        })
+          complete: !this.project.complete,
+        }),
       })
         .then(() => {
           this.$emit("completeProject", {
-              ...this.project,
-              complete: !this.project.complete,
+            ...this.project,
+            complete: !this.project.complete,
           });
         })
         .catch((err) => console.log(err.message));
