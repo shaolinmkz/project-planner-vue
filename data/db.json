@@ -15,8 +15,14 @@
     {
       "title": "Make a new vue project",
       "details": "Software Development Life Cycle (SDLC) is a process used by the software industry to design, develop and test high quality softwares. The SDLC aims to produce a high-quality software that meets or exceeds customer expectations, reaches completion within times and cost estimates.",
-      "complete": false,
+      "complete": true,
       "id": 3
+    },
+    {
+      "title": "New Work 2.2",
+      "details": "Lorem 456",
+      "complete": true,
+      "id": 4
     }
   ]
 }

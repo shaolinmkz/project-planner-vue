@@ -1,24 +1,26 @@
-# project-planner-vue
+# Project Planner
 
-## Project setup
+## Project Setup
+Follow these steps below to start-up json-server locally and serve app
+### Steps
+```bash
+cd project-planner-vue
 ```
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
+```bash
+sudo npm i -g json-server
 ```
+
+```bash
+npm run json-sr
+```
+
+```bash
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Gallery
+![](https://res.cloudinary.com/shaolinmkz/image/upload/v1611620697/Random-Icons/project-planner-vue.gif)
